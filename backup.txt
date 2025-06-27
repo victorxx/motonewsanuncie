@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Configurações básicas -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título da página e SEO principal -->
+  <title>MotoNews - Notícias, Lançamentos e Tendências do Mundo das Motos</title>
+  <meta name="description" content="As últimas novidades do universo das motocicletas: lançamentos, comparativos, dicas, tecnologia e tudo sobre o mundo das duas rodas." />
+  <meta name="keywords" content="motos, motocicletas, lançamentos de motos, notícias de motos, mercado de motos, eventos de motociclismo, motos elétricas" />
+  <meta name="author" content="MotoNews Brasil" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://seudominio.com/moto-news" />
+
+  <!-- Localização geográfica para SEO local -->
+  <meta http-equiv="content-language" content="pt-BR" />
+  <meta name="geo.region" content="BR-ES" />
+  <meta name="geo.placename" content="Vila Velha" />
+  <meta name="geo.position" content="-20.353,-40.293" />
+  <meta name="ICBM" content="-20.353, -40.293" />
+
+  <!-- Metadados Open Graph para Facebook, LinkedIn e redes sociais -->
+  <meta property="og:title" content="MotoNews - Notícias e Lançamentos das Duas Rodas" />
+  <meta property="og:description" content="Acompanhe tudo sobre o mundo das motocicletas: lançamentos, comparativos, tendências e tecnologia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seudominio.com/moto-news" />
+  <meta property="og:image" content="https://seudominio.com/images/og-motos.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card para visualização otimizada em tweets -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MotoNews - Notícias e Lançamentos das Motos" />
+  <meta name="twitter:description" content="Lançamentos, eventos e novidades do setor de motocicletas no Brasil." />
+  <meta name="twitter:image" content="https://seudominio.com/images/twitter-motos.jpg" />
+  <meta name="twitter:site" content="@MotoNewsBrasil" />
+
+  <!-- Favicon da aba do navegador -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Estilos CSS -->
+  <style>
+    /* Estilos gerais da página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* Carrossel de imagens (slider) */
+    .slider {
+      max-width: 1000px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 16s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      25%  { transform: translateX(-100%); }
+      50%  { transform: translateX(-200%); }
+      75%  { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+
+    /* Seção de notícias */
+    .noticias {
+      max-width: 1000px;
+      background: #fff;
+      margin: 30px auto;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .noticia {
+      margin-bottom: 30px;
+    }
+    .noticia h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #111;
+    }
+    .noticia p {
+      color: #555;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Rodapé */
+    footer {
+      background: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .noticia h2 { font-size: 1.2rem; }
+    }
+
+    /* Link do WhatsApp */
+    .whatsapp-link {
+      display: inline-block;
+      background-color: #25D366;
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-link:hover,
+    .whatsapp-link:focus {
+      background-color: #1ebe57;
+      outline: none;
+    }
+
+    /* Anúncios fixos no canto inferior esquerdo */
+    #ads {
+      color: white;
+      font-size: large;
+      position: fixed;
+      bottom: -30px;
+      left: 0%;
+      background-color: blueviolet;
+      border-radius: 8px;
+      border: none;
+      padding: 50px 66px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      width: 10%;
+      text-align: center;
+      z-index: 1000;
+    }
+    #ads a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cabeçalho do site -->
+  <header>
+    <h1>MotoNews</h1>
+    <p>As principais notícias do mundo das motocicletas</p>
+  </header>
+
+  <!-- Carrossel de imagens -->
+  <main>
+    <section class="slider">
+      <div class="slides">
+        <img src="https://autonees01.netlify.app/anuncie.jpg" alt="Moto esportiva moderna" />
+        <img src="https://autonees01.netlify.app/anuncie.jpg" alt="Moto de aventura" />
+        <img src="https://autonees01.netlify.app/anuncie.jpg" alt="Moto customizada" />
+     
+      </div>
+    </section>
+
+    <!-- Botão para contato via WhatsApp -->
+    <section style="text-align:center; margin: 20px 0;">
+      <a href="https://wa.me/5527999860405" class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+        📱 Fale conosco pelo WhatsApp
+      </a>
+    </section>
+
+    <!-- Seção de notícias -->
+    <section class="noticias">
+      <article class="noticia">
+        <h2>Festival Interlagos reúne os principais lançamentos de motos</h2>
+        <p>Modelos icônicos e novidades do mercado são apresentados ao público, incluindo esportivas, aventureiras e scooters.</p>
+      </article>
+
+      <article class="noticia">
+        <h2>Motos elétricas ganham espaço nas cidades brasileiras</h2>
+        <p>Com zero emissão e baixo custo de manutenção, scooters elétricos estão se popularizando entre jovens e entregadores.</p>
+      </article>
+
+      <article class="noticia">
+        <h2>Honda lança novos modelos com foco em eficiência e desempenho</h2>
+        <p>A montadora apresenta motocicletas com motores otimizados, painel digital e conectividade embarcada.</p>
+      </article>
+
+      <article class="noticia">
+        <h2>Royal Enfield aposta em modelos urbanos e aventureiros</h2>
+        <p>Combinando tradição e modernidade, a marca amplia sua presença com modelos de 350cc e 450cc.</p>
+      </article>
+
+      <article class="noticia">
+        <h2>Mercado de motos custom cresce com novos estilos</h2>
+        <p>Motociclistas buscam estilo único e liberdade com personalizações e modelos inspirados em clássicas retrô.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer>
+    &copy; MotoNews Brasil – Conteúdo sempre atualizado sobre o mundo das duas rodas.
+  </footer>
+
+  <!-- Caixa de anúncios fixa -->
+  <div id="ads">
+    <a href="https://vpserp.vercel.app/" target="_blank" rel="noopener noreferrer">
+      CONFIRA ESSAS SOLUÇÕES DE TI
+    </a>
+    <br><br><br />
+    <a href="https://creditopessoal.vercel.app/" target="_blank" rel="noopener noreferrer">
+      CRÉDITO PESSOAL E SEGUROS
+    </a>
+  </div>
+
+</body>
+</html>
